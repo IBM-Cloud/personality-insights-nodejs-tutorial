@@ -13,7 +13,6 @@
     "watson-developer-cloud": "*",
     "cf-deployment-tracker-client": "*"
   },
-  "repository": {},
   "engines": {
     "node": "0.12.x"
   },
