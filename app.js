@@ -36,16 +36,18 @@ creds.version = 'v2';
 var personalityInsights = watson.personality_insights(creds);
 
 var uploading = multer({
-    dest: __dirname + '/public/uploads/'
+    storage: multer.memoryStorage()
 });
 
-app.post('/upload', uploading, function (request, response) {
-    var txtFile = request.files.file.toString();
+app.post('/upload', uploading.single('file'), function (request, response) {
+    console.log("file");
+    var txtFile = request.file.buffer.toString();
+    console.log(request.file.buffer);
 
-    personality_insights.profile({
+    personalityInsights.profile({
         text: txtFile },
         function (error, result) {
-            if (err) {
+            if (error) {
                 response.send(error);
             }
             else {
