@@ -28,8 +28,19 @@ app.listen(appEnv.port, '0.0.0.0', function() {
   console.log("server starting on " + appEnv.url);
 });
 
-var watson = require('watson-developer-cloud');
+var watson = require('watson-developer-cloud'),
+    multer = require('multer');
 
 var creds = appEnv.getServiceCreds('personality-insights-tutorial');
 creds.version = 'v2';
 var personalityInsights = watson.personality_insights(creds);
+
+var uploading = multer({
+    dest: __dirname + '/public/uploads/',
+});
+
+app.post('/upload', uploading, function (request, response) {
+    response.send("thanks!");
+});
+
+

@@ -9,6 +9,7 @@
     "body-parser": "^1.14.2",
     "cfenv": "1.0.x",
     "express": "4.12.x",
+    "multer": "^1.1.0",
     "watson-developer-cloud": "*"
   },
   "repository": {},
