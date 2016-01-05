@@ -89,7 +89,7 @@ In this part we need to take the file that has been uploaded and send it to IBM 
 
 1. To do this we need to add the following code to the bottom of our `app.js` file.
 
-        var multer = require('mutler');
+        var multer = require('multer');
 
         var uploading = multer({
             storage: multer.memoryStorage()
