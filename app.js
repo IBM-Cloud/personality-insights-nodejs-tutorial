@@ -27,3 +27,32 @@ app.listen(appEnv.port, '0.0.0.0', function() {
 	// print a message when the server starts listening
   console.log("server starting on " + appEnv.url);
 });
+
+var watson = require('watson-developer-cloud'),
+    multer = require('multer');
+
+var creds = appEnv.getServiceCreds('personality-insights-tutorial');
+creds.version = 'v2';
+var personalityInsights = watson.personality_insights(creds);
+
+var uploading = multer({
+    dest: __dirname + '/public/uploads/',
+});
+
+app.post('/upload', uploading, function (request, response) {
+    var txtFile = request.files.file.toString();
+
+    personality_insights.profile({
+        text: txtFile },
+        function (error, result) {
+            if (err) {
+                response.send(error);
+            }
+            else {
+                response.send(result);
+            }
+        });
+    });
+});
+
+
