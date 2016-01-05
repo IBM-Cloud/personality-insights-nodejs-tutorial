@@ -39,6 +39,8 @@ var uploading = multer({
     storage: multer.memoryStorage()
 });
 
+app.set('json spaces', 4);
+
 app.post('/upload', uploading.single('file'), function (request, response) {
     console.log("file");
     var txtFile = request.file.buffer.toString();
@@ -51,7 +53,7 @@ app.post('/upload', uploading.single('file'), function (request, response) {
                 response.send(error);
             }
             else {
-                response.send(result);
+                response.json(result);
             }
         }
     );
