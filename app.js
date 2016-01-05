@@ -27,3 +27,9 @@ app.listen(appEnv.port, '0.0.0.0', function() {
 	// print a message when the server starts listening
   console.log("server starting on " + appEnv.url);
 });
+
+var watson = require('watson-developer-cloud');
+
+var creds = appEnv.getServiceCreds('personality-insights-tutorial');
+creds.version = 'v2';
+var personalityInsights = watson.personality_insights(creds);
