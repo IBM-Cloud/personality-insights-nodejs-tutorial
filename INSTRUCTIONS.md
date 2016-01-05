@@ -112,7 +112,7 @@ In this part we need to take the file that has been uploaded and send it to IBM 
                 }
             );
         });
-2. Next we need to add the package `mutler` to our `package.json` file so Node knows to install the new dependency. Your `package.json` file should like what is below.
+2. Next we need to add the package `multer` to our `package.json` file so Node knows to install the new dependency. Your `package.json` file should like what is below.
 
         {
           "name": "NodejsStarterApp",
