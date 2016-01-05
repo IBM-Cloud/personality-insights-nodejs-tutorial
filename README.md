@@ -4,7 +4,7 @@
 
 Give it a try! Click the button below to fork into IBM DevOps Services and deploy your own copy of this application on Bluemix.
 
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy)
+[![Deploy to Bluemix](https://deployment-tracker.mybluemix.net/stats/ccafa09830c791a662ee8a38b79e0ea2/button.svg)](https://bluemix.net/deploy?repository=https://github.com/IBM-Bluemix/personality-insights-nodejs-tutorial.git)
 
 ## Getting Started
 
