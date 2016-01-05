@@ -40,7 +40,19 @@ var uploading = multer({
 });
 
 app.post('/upload', uploading, function (request, response) {
-    response.send('thanks!');
+    var txtFile = request.files.file.toString();
+
+    personality_insights.profile({
+        text: txtFile },
+        function (error, result) {
+            if (err) {
+                response.send(error);
+            }
+            else {
+                response.send(result);
+            }
+        });
+    });
 });
 
 
