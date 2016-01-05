@@ -10,10 +10,15 @@
     "cfenv": "1.0.x",
     "express": "4.12.x",
     "multer": "^1.1.0",
-    "watson-developer-cloud": "*"
+    "watson-developer-cloud": "*",
+    "cf-deployment-tracker-client": "*"
   },
   "repository": {},
   "engines": {
     "node": "0.12.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IBM-Bluemix/personality-insights-nodejs-tutorial.git"
   }
 }

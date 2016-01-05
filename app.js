@@ -58,3 +58,5 @@ app.post('/upload', uploading.single('file'), function (request, response) {
 });
 
 
+//---Deployment Tracker---------------------------------------------------------
+require('cf-deployment-tracker-client').track();
