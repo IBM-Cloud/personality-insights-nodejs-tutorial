@@ -40,7 +40,7 @@ var uploading = multer({
 });
 
 app.post('/upload', uploading, function (request, response) {
-    response.send("thanks!");
+    response.send('thanks!');
 });
 
 
