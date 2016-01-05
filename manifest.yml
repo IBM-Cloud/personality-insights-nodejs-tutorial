@@ -1,0 +1,8 @@
+applications:
+- path: .
+  memory: 256M
+  instances: 1
+  domain: mybluemix.net
+  name: speech-to-text-nodejs-tutorial
+  host: speech-to-text-nodejs-tutorial
+  disk_quota: 1024M
