@@ -4,5 +4,4 @@ applications:
   instances: 1
   domain: mybluemix.net
   name: personality-insights-nodejs-tutorial
-  host: personality-insights-nodejs-tutorial
   disk_quota: 1024M
