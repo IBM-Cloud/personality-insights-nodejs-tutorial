@@ -1,3 +1,8 @@
+---
+declared-services:
+  personality-insights-tutorial:
+    label: personality_insights
+    plan: standard
 applications:
 - path: .
   memory: 256M
@@ -6,3 +11,5 @@ applications:
   name: personality-insights-nodejs-tutorial
   host: personality-insights-nodejs-tutorial
   disk_quota: 1024M
+  services:
+  - personality-insights-tutorial
