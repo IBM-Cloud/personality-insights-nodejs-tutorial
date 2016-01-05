@@ -36,7 +36,7 @@ creds.version = 'v2';
 var personalityInsights = watson.personality_insights(creds);
 
 var uploading = multer({
-    dest: __dirname + '/public/uploads/',
+    dest: __dirname + '/public/uploads/'
 });
 
 app.post('/upload', uploading, function (request, response) {
@@ -51,8 +51,8 @@ app.post('/upload', uploading, function (request, response) {
             else {
                 response.send(result);
             }
-        });
-    });
+        }
+    );
 });
 
 
